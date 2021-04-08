@@ -1,0 +1,39 @@
+$azure: #E8F1F2
+$charcoal: #2F3E46
+$babywhite: #FFFFFA
+$platinum: #E5E5E5
+$teal: #0C99A3
+$tomatotown: #EE2E31
+//text for our work
+
+
+@font-face
+  font-family: 'RobotoSlab'
+  src: url("../assets/fonts/RobotoSlab.ttf")
+
+@font-face
+  font-family: 'Quantico'
+  src: url("../assets/fonts/Quantico-Regular.ttf")
+
+@font-face
+  font-family: 'RalewayDots'
+  src: url("../assets/fonts/RalewayDots-Regular.ttf")
+
+
+
+
+=mobile
+  @media screen and (max-width: 940px)
+    @content
+
+=desktop
+  @media screen and (min-width: 941px)
+    @content
+
+.desktop
+  +mobile
+    display: none !important
+
+.mobile
+  +desktop
+    display: none !important

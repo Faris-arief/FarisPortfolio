@@ -1,0 +1,205 @@
+@import "./variables.sass"
+.Toolbar
+  background: $charcoal
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  z-index: 100
+  color: $babywhite
+  height: 70px
+  .Leftside
+    display: flex
+    flex-direction:row
+    margin-left: 1%
+    .Logo
+      +desktop
+        margin-right: 2%
+      +mobile
+        margin-right: 10px
+      a
+        text-decoration: none !important
+      .LogoContainer
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        gap: 10px
+        &:hover, &:active, &:focus
+          .LogoIcon
+            box-shadow: 0px 4px 5px 0px #0C99A3
+            transform: scale(1.05)
+            transition: transform .3s ease-in
+          .LogoText
+            animation: textChange 2s infinite
+        +desktop
+          height: 70px
+        +mobile
+          height: 90px
+        .LogoIcon
+          +desktop
+            width: 50px
+            height: 50px
+          +mobile
+            width: 40px
+            height: 40px
+
+          object-fit: fill
+          border-radius: 180px
+        .LogoText
+          font-family: "RalewayDots"
+          color: $babywhite
+          +desktop
+            font-size: 36px
+          +mobile
+            font-size: 24px
+          white-space: nowrap
+
+    .Socials
+      display: flex
+      flex-direction: row
+      white-space: nowrap
+      justify-content: center
+      align-items: center
+      +desktop
+        gap: 20px
+        padding-left: 10px
+      +mobile
+        gap: 5px
+
+      .SocialLogo
+        margin-top: 5px
+        .SocialIcon
+          +desktop
+            width: 50px
+            height: 50px
+          +mobile
+            width: 30px
+            height: 30px
+          border-radius: 90px
+          &:hover, &:active, &:focus
+            background: $teal !important
+
+
+  .Rightside
+    margin-right: 4%
+    display: flex
+    align-items: center
+    justify-content: center
+    .MobileIconContainer
+      display: flex !important
+      justify-content: center
+      align-items: center
+      width: 50px
+      height: 50px
+      border-radius: 180px
+      transition: background .3s ease-in
+      +desktop
+        display: none !important
+      +mobile
+        margin-left: 5px
+      .MobileIcon
+        stroke: $babywhite
+        transition: stroke .3s ease-in
+    .Activated
+      display: none
+      position: absolute
+      animation: navDown 0.5s ease-in !important
+      top: 70px
+      right: 0vw
+      width: 100vw
+      color: $babywhite
+      flex-direction: column
+      +desktop
+        display: none !important
+      .Links
+        display: flex
+        text-decoration: none !important
+        align-items: center
+        justify-content: center
+        background: $charcoal
+        border-bottom-style: solid
+        border-width: 1px
+        border-color: $azure
+        p
+          font-size: 32px !important
+          font-family: Quantico
+          color: $babywhite
+        &:hover, &:active, &:focus
+          background: $azure !important
+
+      .Links:nth-of-type(1)
+        border-style: solid none solid none
+        border-width: 1px
+        border-color: $azure
+        background: $charcoal
+
+    .Deactivated
+      display: none
+
+
+
+    .Navbar
+      +desktop
+        display: flex
+      +mobile
+        display: none
+      flex-direction: row
+      white-space: nowrap
+      justify-content: center
+      align-items: center
+      gap: 10px
+      .NavContent
+        text-decoration: none !important
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        gap: 10px
+        padding: 0 5px 0 5px
+        &:hover, &:active, &:focus
+          background: $babywhite
+          .Text
+            color: $teal
+          .Vec
+            stroke: $charcoal
+            animation: spin 5s 0s infinite running !important
+        .Vec
+          fill: $teal
+          stroke: $babywhite
+        .Text
+          color: $babywhite
+          font-size: 24px
+          font-family: Quantico
+
+
+@keyframes textChange
+  0%
+    color: $babywhite
+  50%
+    color: $teal
+  100%
+    color: $babywhite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  50%
+    fill: $tomatotown
+    transform: rotate(360deg)
+  100%
+    fill: $teal
+    transform: rotate(0deg)
+
+@keyframes navDown
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes navUp
+  0%
+    opacity: 1
+  100%
+    opacity: 0
