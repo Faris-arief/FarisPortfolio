@@ -37,3 +37,16 @@ $tomatotown: #EE2E31
 .mobile
   +desktop
     display: none !important
+
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+  50%
+    border-color: $teal
+
+
+@keyframes typing
+  from
+    width: 0
+  to
+    width: 100%

@@ -1,33 +1,32 @@
 
 import './sass/App.sass';
-import Manatee from './components/Manatee';
+import Error from './components/Error';
 import Narwhal from './components/Narwhal';
 import Whale from './components/Whale/Whale';
+import Home from './components/Home';
 import Toolbar from './components/Toolbar';
-import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import Projects from './components/ProjectsList';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
       <Toolbar/>
       <BrowserRouter>
-        <nav>
-          <ul>
-            <li><a href="/manatee">Manatee</a></li>
-            <li><a href="/narwhal">Narwhal</a></li>
-            <li><a href="/whale">Whale</a></li>
-            <li><Link to="/whale/beluga">Beluga Whale</Link></li>
-            <li><Link to="/whale/blue">Blue Whale</Link></li>
-          </ul>
-        </nav>
           <Switch>
-            <Route path="/manatee">
-              <Manatee />
+            <Route path="/projects">
+              <Projects/>
             </Route>
             <Route path="/narwhal">
               <Narwhal />
             </Route>
             <Route  path="/whale">
               <Whale />
+            </Route>
+            <Route exact path="/">
+              <Home/>
+            </Route>
+            <Route path="/">
+              <Error/>
             </Route>
           </Switch>
       </BrowserRouter>

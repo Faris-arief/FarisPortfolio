@@ -1,0 +1,71 @@
+@import ./variables
+#main
+  width: 100vw
+  height: 100vh
+  .banner
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    height: 400px
+    background: rgba(12, 153, 163, 0.33)
+    .text
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      height: 100%
+      width: 80%
+      .projectText
+        font-size: 64px
+        font-family: "Quantico"
+        color: $babywhite
+        margin-bottom: 0px
+      .tealText
+        font-size: 64px
+        font-family: "Quantico"
+        color: $teal
+        margin: 0 auto 5px auto
+        overflow: hidden
+        white-space: nowrap
+      .anim
+        animation-delay: 0s
+        animation: typing 3.0s  steps(30, end) infinite
+      .smallText
+        font-family: Quantico
+        font-size: 24px
+        text-align: center
+        color: rgba(47, 62, 70, 0.75)
+        width: 80%
+  .projects
+    background: $babywhite
+    height: 100vh
+    width: 100vw
+    display: flex
+    align-items: center
+    flex-direction: column
+    .buttonList
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: center
+      gap: 70px
+      width: 60%
+      margin-top: 60px
+      .button
+        width: 25%
+        background: rgba(12, 153, 163, 0.12)
+        border: none
+        cursor: pointer
+        &:hover, &:active, &:focus
+          border: none
+          transition: background 0.5s ease-in
+          background: rgba(12, 153, 163, 0.74)
+          outline: 0
+          p
+            color: $babywhite
+        p
+          font-family: 'Quantico'
+          font-size: 24px
+          text-align: center
+          color: rgba(47, 62, 70, 0.45)

@@ -1,0 +1,201 @@
+@import "./variables.sass"
+
+.Home
+  background: $babywhite
+  width: 100vw
+  height: 100vh
+
+.AboutMe
+  display: flex
+  flex-direction: row
+  height: 700px
+  width: 100vw
+  background: rgba(12, 153, 163, 0.64)
+  .Parallelogram
+    z-index: 99999
+    display: flex
+    width: 50%
+    height: 100%
+    align-items: center
+    justify-content: center
+    .Slant
+      display: flex
+      position: relative
+      text-align: center
+      align-items: center
+      justify-content: center
+      width: 80%
+      max-width: 80%
+      height: 80%
+      background-repeat: no-repeat
+      img
+        float: right
+      .text
+        font-family: "Quantico"
+        font-size: 42px
+        position: absolute
+        top: 50%
+        left: 50%
+        padding-right: 10%
+        transform: translate(-50%, -50%)
+        span
+          color: $teal
+        .otherText
+          color: $tomatotown
+        .First
+          white-space: nowrap
+          animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite
+          border: 5px solid $teal
+          border-top: $teal
+          border-bottom: $teal
+          border-left: $teal
+
+          overflow: hidden
+          margin: auto
+  .MyPic
+    width: 50%
+    height: 100%
+    display: flex
+    position: relative
+    align-content: center
+    align-items: center
+    justify-items: center
+    .firstCircle
+      animation: typing2 3s
+      display: flex
+      align-content: center
+      align-items: center
+      justify-content: center
+      background: rgba(12, 153, 163, 0.33) !important
+      height: 90%
+      width: 80%
+      z-index: 10000
+      border-radius: 360px
+      .secondCircle
+        display: flex
+        align-content: center
+        align-items: center
+        justify-content: center
+        width: 70%
+        height: 100%
+        background: rgba(12, 153, 163, 0.55) !important
+        border-radius: 360px
+        .thirdCircle
+          display: flex
+          align-content: center
+          align-items: center
+          justify-content: center
+          width: 70%
+          height: 100%
+          background: rgba(12, 153, 163, 0.77) !important
+          border-radius: 360px
+          img
+            max-height: 70%
+
+.DoWhat
+  display: flex
+  flex-direction: column
+  align-items: center
+  h1
+    font-family: "Quantico"
+    font-size: 72px
+    color: rgba(47, 62, 70, 0.75)
+  .divBar
+    display: flex
+    flex-direction: row
+    width: 90%
+    margin-bottom: 100px
+    justify-content: center
+    align-items: center
+    gap: 45px
+    .infoPanel
+      display: flex
+      flex-direction: column
+      align-items: center
+      background: #E5E5E5
+      width: 30%
+      height: 650px
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      border-radius: 90px
+      img
+        width: 70%
+        object-fit: fill
+        padding-top: 10%
+        max-height: 50%
+        height: 50%
+      h1
+        margin-top: 5%
+        font-size: 24px
+        color: $charcoal
+        font-family: "RobotoSlab"
+        font-weight: bold
+
+      .list
+        &:hover, &:active, &:focus
+          transition: transform 0.5s ease-in
+          transform: scale(1.05)
+        margin-top: 0px
+        padding-right: 40px
+        margin-left: 40px
+        font-size: 18px
+        color: $charcoal
+        font-family: "RobotoSlab"
+        font-weight: bold
+.Skillset
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background: rgba(232, 241, 242, 0.72)
+  padding-bottom: 100px !important
+  h1
+    font-family: "Quantico"
+    font-size: 72px
+    color: rgba(47, 62, 70, 0.75)
+  .Skills
+    display: flex
+    width: 90%
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    flex-wrap: wrap
+    gap: 45px
+    .Skill
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 27%
+      height: 500px
+      box-shadow: 0px 4px 30px rgba(12, 153, 163, 0.3)
+      border-radius: 45px
+      &:hover, &:active, &:focus
+        transition: box-shadow 0.5s ease-in
+        box-shadow: 0px 4px 30px #0C99A3
+        transform: scale(1.05)
+      img
+        width: 60%
+        height: 50%
+      p
+        font-size: 36px
+        font-family: "Quantico"
+
+
+
+
+
+
+
+
+/* The typing effect */
+
+@keyframes typing2
+  from
+    transform: translateX(-100%)
+    width: 0
+  to
+    width: 80%
+
+
+
