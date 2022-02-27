@@ -3,7 +3,7 @@ import { iconProp } from './SideBarIcon.d';
 
 const SideBarIcon = ({icon, text = 'tooltip'}:iconProp) =>{
   return (
-    <div className="sidebar-icon group">
+    <div className="sidebar-icon group ">
       {icon}
 
       <span className="sidebar-tooltip group-hover:scale-100">
