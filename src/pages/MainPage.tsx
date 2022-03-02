@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 
 const MainPage = ()=> {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = ()=>setOffsetY(window.pageYOffset);
+
+  useEffect(()=>{
+    window.addEventListener("scroll",handleScroll)
+    return ()=>window.removeEventListener("scroll",handleScroll)
+  }, [])
   return (
-    <div className='flex flex-col w-[calc(100% - 80px)] h-[100%]'>
-        <p>Test<br/></p>
-        <p>POOP</p>
+    <div className='relative flex align-center flex-col w-full h-[200%] justify-start ' style={{transform: `translateY(-${offsetY * 0.5}px)`}}>
+      <div className=" absolute bg-main bg-contain bg-no-repeat w-[1080px] h-[1280px]"
+      style={{transform: `translateY(-${offsetY * 0.5}px)`}}>
+      </div>
+      <div className="absolute z-10 bg-mainback bg-contain bg-no-repeat w-[1080px] h-[1280px]"
+        style={{transform: `translateY(${offsetY * 0.25}px)`}}>  
+        </div>
     </div>
   )
 }

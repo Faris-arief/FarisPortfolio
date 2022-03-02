@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'main': "url('/src/images/mainBackground.svg')",
+        'mainback': "url('/src/images/background-triangles.png')",
+      },
       colors:{
         primary: '#2F3E46',
         primarytooltip: '#00515769',
@@ -16,11 +20,13 @@ module.exports = {
         iconsecondary: '#15CDD9'
       },
       height:{
-        topbar:"80px" 
+        full:"100%",
+        topbar:"4rem" 
       },
       width:{
-        sidebar:"80px", 
-        icon:"85%"
+        full:"100%",
+        sidebar:"4rem", 
+
       },
       keyframes: {
         enter: {

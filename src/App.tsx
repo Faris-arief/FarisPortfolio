@@ -19,10 +19,12 @@ function App() {
     }
   return(  
       <Router>
-        <div className="flex w-screen h-screen flex-col">
+        <div className="flex w-screen h-screen flex-row">
           <TopBar collapse={isCollapsed} setCollapse={onClickCollapse}/>
-          {sideBarTransition((style,item) => item ?<animated.div style={style}><SideBar/></animated.div>:'')}
-          <ContentContainer collapse={isCollapsed}/>
+          <div className="flex flex-row h-screen w-screen">
+            { !isCollapsed ?<SideBar/>:''}
+            <ContentContainer collapse={isCollapsed}/>
+          </div>
         </div>
       </Router>
     )

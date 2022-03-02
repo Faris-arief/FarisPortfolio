@@ -1,13 +1,31 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities;  
 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f3fdff60; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2fe5f1a3; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00eeffa3; 
+}
 
 @layer components{
 
   .sidebar-icon{
     @apply relative flex items-center justify-center cursor-pointer
-     h-14 w-14 min-w-fit  my-2 mx-auto bg-iconprimary text-textprimary
+     h-12 w-12 min-w-fit  my-2 mx-auto bg-iconprimary text-textprimary
       hover:bg-iconsecondary hover:text-textsecondary rounded-full
       hover:rounded-bl-none hover:rounded-tl-none  transition-all ease-in duration-150;
   }
