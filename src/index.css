@@ -3,23 +3,14 @@
 @tailwind utilities;  
 
 ::-webkit-scrollbar {
-  width: 1rem;
+  display:none
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f3fdff60; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #2fe5f1a3; 
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #00eeffa3; 
-}
+
+
+
+
 
 @layer components{
 
@@ -27,10 +18,10 @@
     @apply relative flex items-center justify-center cursor-pointer
      h-12 w-12 min-w-fit  my-2 mx-auto bg-iconprimary text-textprimary
       hover:bg-iconsecondary hover:text-textsecondary rounded-full
-      hover:rounded-bl-none hover:rounded-tl-none  transition-all ease-in duration-150;
+      hover:rounded-xl   transition-all ease-in-out duration-100;
   }
   .sidebar-tooltip{
-    @apply absolute w-auto p-2 m-2 min-w-max left-20 rounded-md shadow-md
+    @apply z-10 absolute w-auto p-2 m-2 min-w-max left-20 rounded-md shadow-md
     text-white bg-primarytooltip text-lg font-bold
     transition-all duration-150 scale-0 origin-left;
   }

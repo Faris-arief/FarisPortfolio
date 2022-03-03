@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'main': "url('/src/images/mainBackground.svg')",
-        'mainback': "url('/src/images/background-triangles.png')",
+        'mainEle': "url('/src/images/mainElement.svg')",
       },
       colors:{
         primary: '#2F3E46',
