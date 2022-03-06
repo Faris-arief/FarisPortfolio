@@ -1,11 +1,14 @@
 import React from 'react';
 import SideBarIcon from './SideBarIcon';
+import {sideBarProp} from './SideBar.d';
+
 
 import { IoMdHelp} from 'react-icons/io'
 import {AiOutlineHome, AiOutlineAppstore} from 'react-icons/ai'
-const SideBar = () =>{
+const SideBar = ({style}:sideBarProp) =>{
+
   return (
-    <div className="relative top-0 left-0 h-screen w-sidebar m-0 flex flex-col text-center bg-primary text-secondary shadow">
+    <div className= {style + " relative top-0 left-0 h-screen w-sidebar m-0 flex flex-col text-center bg-primary text-secondary shadow"}>
         <div className='h-topbar flex items-center content-center'/>
         <SideBarIcon icon ={<AiOutlineHome size="32" />} path="/" text= "Home"/>
         <SideBarIcon icon ={<AiOutlineAppstore size="32" />} text= "Projects" path="/projects"/>

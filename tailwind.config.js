@@ -32,10 +32,16 @@ module.exports = {
         enter: {
           '0%': { transform: 'translateX(-10rem)' },
           '100%': { transform: 'none' }
+        },
+
+        leave: {
+          '0%': { transform: 'none' },
+          '100%': { transform: 'translateX(-10rem)' },
         }
       },
       animation: {
-        enter: 'enter 0.5s ease-in-out',
+        enter: 'enter 0.3s ease-in',
+        leave: 'leave 0.3s ease-out',
       },
 
       fontSize: {

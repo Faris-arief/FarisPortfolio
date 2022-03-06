@@ -13,16 +13,16 @@ const MainPage = ( {offsetY}:mainPageProp)=> {
       <div className="bg-main bg-cover  w-[100%] h-[100%]"
       style={{transform: `translateY(${translateY * 0.5}px)`}}>
       </div>
-      <div className="absolute top-[10%] left-20 z-10 bg-mainEle bg-contain bg-no-repeat w-32 h-32"
+      <div className="absolute top-[10%] md:left-32 left-8 z-10 bg-mainEle bg-contain bg-no-repeat w-16 h-16"
         style={{transform: `translateY(${translateY * 0.10}px)`}}>  
       </div>
-      <div className="absolute top-[10%] right-20 z-10 bg-mainEle bg-contain bg-no-repeat w-32 h-32"
+      <div className="absolute top-[10%] md:right-32 right-8 z-10 bg-mainEle bg-contain bg-no-repeat w-16 h-16"
         style={{transform: `translateY(${translateY * 0.10}px) rotate(90deg)`}}>  
       </div>
-      <div className="absolute top-[20%] right-20 z-10 bg-mainEle bg-contain bg-no-repeat w-32 h-32"
+      <div className="absolute top-[20%] md:right-32 right-8 z-10 bg-mainEle bg-contain bg-no-repeat w-16 h-16"
         style={{transform: `translateY(${translateY * 0.10}px) rotate(180deg)`}}>  
       </div>
-      <div className="absolute top-[20%] left-20 z-10 bg-mainEle bg-contain bg-no-repeat w-32 h-32"
+      <div className="absolute top-[20%] md:left-32 left-8 z-10 bg-mainEle bg-contain bg-no-repeat w-16 h-16"
         style={{transform: `translateY(${translateY * 0.10}px) rotate(270deg)`}}>  
       </div>
     </div>
